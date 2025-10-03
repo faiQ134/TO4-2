@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EnergySense Appliances</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <a class="brand" href="#" data-route="home" aria-label="Go to Home">
+      <img src="assets/power-logo.svg" alt="Power logo" class="brand__logo" />
+      <span class="brand__text">EnergySense</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <button class="topnav__link" data-route="home" aria-current="page">Home</button>
+      <button class="topnav__link" data-route="televisions">Televisions</button>
+      <button class="topnav__link" data-route="about">About Us</button>
+    </nav>
+  </header>
+
+  <h1>Appliance Energy Consumption</h1>
+  <div id="content"></div>
+  <!-- Give the SVG a size so shapes can be seen -->
+  <svg width="300" height="150"></svg>
+  <!-- Load D3 first, then your D3 code file -->
+  
+  <!-- <script src="energy-d3.js"></script> -->
+   <!-- …your existing content… -->
+  <!-- NEW: Container for T04-3 chart -->
+  <div class="responsive-svg-container"></div>
+  
+  
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="t04-4-load.js"></script>  // loads CSV then calls createBarChart
+  <script src="t04-5-bars.js"></script>  // defines createBarChart
+
+
+
+</body>
+
+<!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      <span id="year"></span> • <span id="your-name">Faiq</span> •
+      Built for learning.
+      <span class="ack">
+        This site includes code/content generated with the assistance of GenAI.
+      </span>
+    </p>
+  </footer>
+  <script>
+    // Update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</html>
